@@ -62,7 +62,7 @@ public class Main {
     public static void main(String[] args) {
         Shape s1 = new Circle();
         Shape s2 = new Square();
-
+        //Here, the method call draw() is resolved at runtime, depending on the actual object (Circle or Square), not the reference type (Shape).
         s1.draw(); // Output: Drawing a circle
         s2.draw(); // Output: Drawing a square
     }
@@ -73,5 +73,11 @@ public class Main {
 - **Code Reusability**: Common interfaces can be defined, allowing different classes to implement them in their own way.
 - **Dynamic Method Resolution**: The method that gets executed is determined at runtime based on the actual object type, allowing for more dynamic behavior.
 4. Polymorphism can also be achieved through interfaces, where different classes implement the same interface and provide their own implementations for the methods defined in the interface.
+
+```
+| Type                          | When it Happens | How it Works       | Keyword / Concept                      |
+| ----------------------------- | --------------- | ------------------ | -------------------------------------- |
+| **Compile-time polymorphism** | At compile time | Method Overloading | same method name, different parameters |
+| **Runtime polymorphism**      | At runtime      | Method Overriding  | subclass redefines a superclass method |
 
 ```
